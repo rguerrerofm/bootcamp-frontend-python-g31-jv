@@ -1,0 +1,16 @@
+body {
+    background-color: orangered;
+}
+p{color: brown;}
+h2 {background-color: black ;}
+
+h5{
+    background-color: aqua;
+    font-size: 50px;
+}
+#estado {background-color: blueviolet;}
+.btn {
+    background-color: red;
+}
+.texto-resaltado {color: azure;}
+/* Esto es un comentario    
