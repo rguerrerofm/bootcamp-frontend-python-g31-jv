@@ -16,13 +16,14 @@ body {
 }
 
 main {
-  border: 1px solid red;
-
+  
   width: 650px;
 
   min-height: 400px;
 
-  display: flex; /* Alineamiento horizontal */
+  display: flex; /* Alineamiento horizontal; */
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 .photo {
