@@ -112,3 +112,26 @@ img {
 
   text-align: center;
 }
+.hero__button {
+  border: none;
+
+  background-color: hsl(176, 68%, 64%);
+  border-radius: 7rem;
+  padding: 1rem;
+  min-width: 260px;
+  color: white;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+/*
+TAMAÑOS DE PANTALLA SUGERIDOS:
+
+576px  -> pantallas pequeñas (celulares)
+768px  -> pantallas pequeñas (tablets y celulares)
+992px  -> pantallas medianas (Desktop)
+1280px -> pantallas grandes (Desktops, TVs)
+*/
+
+/* TODO: Publicar esta página en netlify con el header, hero y sección (stay productive). Tienen hasta el domingo a la media noche (12am). Lo comparten por discord en el canal de presentaciones de la semana3 */
