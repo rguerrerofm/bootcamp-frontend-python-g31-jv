@@ -95,3 +95,20 @@ img {
   background-position: bottom;
   background-size: contain;
 }
+
+.hero__title {
+  /* min: Elije el valor más pequeño entre los que le pasemos */
+  width: min(100% - 3rem, 720px);
+
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700; /* por defecto */
+
+  text-align: center;
+}
+
+.hero__text {
+  width: min(100% - 3rem, 460px);
+
+  text-align: center;
+}
