@@ -16,17 +16,21 @@ body {
 }
 
 main {
-  
+  /* border: 1px solid red; */
+
   width: 650px;
 
   min-height: 400px;
 
-  display: flex; /* Alineamiento horizontal; */
+  display: flex; /* Alineamiento horizontal */
+
   border-radius: 14px;
   overflow: hidden;
 }
 
 .photo {
+  /* border: 1px solid green; */
+
   width: 350px;
 
   background-image: url(images/image-product-desktop.jpg);
@@ -55,45 +59,57 @@ main {
   letter-spacing: 7px;
   text-transform: uppercase;
 }
-.content h1 { 
+
+/* TODO: Terminar con los estilos de las etiquetas h1 y p aplicando colores, fuentes y tamños de letra */
+
+.content h1 {
   color: hsl(212, 21%, 14%);
   font-family: "Fraunces", serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 1;
 }
-.content p{
-  margin: 0;
+
+.content p {
   color: hsl(228, 12%, 48%);
   font-weight: 500;
   line-height: 1.5;
-
 }
+
 .content div {
   display: flex;
   gap: 14px;
+  align-items: center;
 }
-.content span{ 
+
+.content span {
   font-family: "Fraunces", serif;
   font-weight: 700;
   font-size: 40px;
   color: hsl(158, 36%, 37%);
 }
-.content s{
+
+.content s {
   color: hsl(228, 12%, 48%);
 }
+
 .content button {
+  /* border: 1px solid red; */
+
   border: none;
   background-color: hsl(158, 36%, 37%);
   color: white;
+
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+
   padding: 14px;
   width: 100%;
   border-radius: 7px;
+
   display: flex;
   justify-content: center;
   gap: 7px;
+
   margin-top: 21px;
 }
-/* TODO: Terminar con los estilos de las etiquetas h1 y p aplicando colores, fuentes y tamños de letra */
