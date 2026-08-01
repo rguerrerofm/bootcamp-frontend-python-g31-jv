@@ -98,4 +98,27 @@ a {
 
 .hero {
   border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem;
+}
+
+/* TODO: Añadir los estilos a las siguientes clases para la sección .hero  */
+
+.hero_gretting {
+}
+
+.hero_gretting span {
+}
+
+.hero_title {
+}
+
+.hero_description {
+}
+
+.hero_photo {
 }
