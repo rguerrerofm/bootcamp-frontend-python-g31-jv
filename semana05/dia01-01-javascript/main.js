@@ -1,12 +1,3 @@
-
-const a = 10
-const b = 3
-console.log(a/b)
-
-const Base = 10
-const Altura =5
-console.log (Base*Altura/2)
-
 // La siguiente línea imprime en la consola del navegador el texrto ¡Hola Javascript!
 
 console.log('¡Hola Javascript!')
@@ -142,4 +133,158 @@ console.log("Hola " + nombre2 + ", tienes " + edad2 + " años.") // Hola Victor,
 // Mejor forma de concatenar (template strings) - backtick (alt gr + })
 console.log(`Hola ${nombre2}, tienes ${edad2} años.`) // Hola Victor, tienes 39 años.
 
-// 8. Condicionales
+// 8. Condicionales (if)
+
+let numero = 4
+
+if (numero % 2 === 0) { // Si es verdadera la condición se ejecuta el bloque entre las llaves
+  console.log('Es par')
+}
+
+let nota = 18
+
+if (nota >= 13) {
+  console.log('Aprobado')
+} else {
+  console.log('Desaprobado')
+}
+
+let heroe = 'Spiderman'
+
+if (heroe === 'Batman') {
+  console.log('Hola soy Bruce')
+} else if (heroe === 'Spiderman') {
+  console.log('Hola soy Peter')
+} else if (heroe === 'Ironman') {
+  console.log('Hola soy Tony')
+} else {
+  console.log('No soy un heroe 😀')
+}
+
+// TODO: Investiguen la estructura switch
+
+// 9. ESTRUCTURAS REPETITIVAS (FOR, WHILE, DO WHILE)
+
+// for (Sirve para repetir una o varias instrucciones)
+
+// Ejercicio: imprimir en consola los números del 0 al 9
+
+// console.log(0)
+// console.log(1)
+// console.log(2)
+// console.log(3)
+// console.log(4)
+// console.log(5)
+// console.log(6)
+// console.log(7)
+// console.log(8)
+// console.log(9)
+
+for (let i = 0; i < 10; i++) {
+  console.log(i)
+}
+
+// while
+
+let j = 0
+
+while (j < 10) {
+  console.log('while', j)
+  
+  j++
+}
+
+// do while
+
+// TODO: investiguen la diferencia con while
+
+// EJERCICIOS
+
+// 2. Dado un número, mostrar "par y mayor a 10", "par y menor o igual a 10", "Impar"
+
+// 3. Dado un número entero, escribe un programa que:
+// - Muestre "fizzbuzz" si el número es divisible entre 3 y 5.
+// - Muestre "fizz" si el número es divisible solo entre 3.
+// - Muestre "buzz" si el número es divisible solo entre 5.
+// - En cualquier otro caso, debe mostrar el mismo número.
+
+// 10. Función
+
+// Una función es un bloque de código reutilizable que hace una tarea
+
+// ENTRADA -> [LÓGICA] -> SALIDA CON EL RESULTADO
+
+// Función básica
+
+function saludar() {
+  console.log('Hola funciones!')
+}
+
+saludar() // Ejecutar la función
+saludar() // Ejecutar la función
+saludar() // Ejecutar la función
+
+// Funciones con parámetros
+
+function saludoConNombre(nombre) {
+  console.log('Hola ' + nombre)
+}
+
+saludoConNombre('Victor')
+saludoConNombre()
+
+// Funciones que retornan valores
+
+function sumar(a, b) {
+  const suma = a + b
+
+  return suma // Dvuelve solo el resultado de lo que se opere
+}
+
+console.log(sumar(2, 3))
+
+
+function esPar(numero) {
+  return numero % 2 === 0  // Boolean
+}
+
+console.log(esPar(4)) // true
+console.log(esPar(7)) // false
+
+// Ejercicios
+
+// 1. Crear una función que reciba un número y devuelva el doble de ese número por consola
+// 2. Crear una función que reciba dos números y devuelva el mayor por consola
+// 3. Reutilizar el ejercicio de fizzBuzz usando funciones de tal forma que puedan llamarlo de la siguiente manera. Ej. fizzBuzz(15) -> fizzbuzz
+
+function doble(numero) {
+  return numero * 2
+}
+
+console.log(doble(8))
+console.log(doble(3))
+
+// 11. Cadena de texto
+
+// Propiedad .length
+
+console.log("Hola".length) // 4
+
+// Acceder a caracteres, cada letra tiene una posición (empieza con 0)
+
+let miNombre = 'Victor'
+
+console.log(miNombre[0]) // V
+console.log(miNombre[1]) // i
+console.log(miNombre[2]) // c
+
+// Métodos importantes de las cadenas de texto
+
+console.log(miNombre.toLowerCase()) // victor
+console.log(miNombre.toUpperCase()) // VICTOR
+console.log(miNombre.includes('ct')) // true
+
+// EJERCICIOS:
+
+// 1. Dado un string, crear una función llamada evaluarTexto que devuelva: "Largo" si tiene más de 10 caracteres y "Corto" si tiene 10 o menos.
+// 2. Dado un string, crear una función llamada invertirTexto que devuelve el texto invertido. Ej. hola -> aloh
