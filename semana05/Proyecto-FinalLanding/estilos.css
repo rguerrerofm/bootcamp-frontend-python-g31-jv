@@ -1,0 +1,85 @@
+/* -- RESETEAR NAVEGADOR -- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* -- COLORES DE LA PAGINA -- */
+:root {
+  --azul-oscuro: hsl(233, 26%, 24%);
+  --verde: hsl(136, 65%, 51%);
+  --cyan: hsl(192, 70%, 51%);
+  --gris: hsl(233, 8%, 62%);
+  --gris-claro: hsl(220, 16%, 96%);
+  --blanco: hsl(0, 0%, 100%);
+}
+
+/* -- ESTILO PARA TODA LA PAGINA -- */
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+  color: var(--gris);
+  background-color: var(--blanco);
+}
+
+/* -- PARA QUE NINGUNA IMAGEN SALGA DE SU CAJA DONDE LA CONTIENE -- */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* -- PARA QUITAR EL SUBRAYADO DE LOS ENLACES Y NO SE PONGA AZUL */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -- BARRA DE NAVEGACIÓN (header) --*/
+.barra-navegadora {
+  display: flex;
+  justify-content: space-between; /* separa logo, menú y botón a los extremos */
+  align-items: center;            /* los centra a la misma altura */
+  padding: 20px 40px;             /* aire: 20px arriba/abajo, 40px izq/der */
+  background-color: var(--blanco);
+}
+
+/* Los enlaces del menú: en fila y con espacio entre ellos */
+.barra-navegadora nav {
+  display: flex;
+  gap: 30px;
+}
+
+/* Color de cada enlace del menú */
+.barra-navegadora nav a {
+  color: var(--gris);
+  font-size: 14px;
+}
+
+/* Al pasar el mouse, el enlace se oscurece */
+.barra-navegadora nav a:hover {
+  color: var(--azul-oscuro);
+}
+
+/* Estilo para el boton que se repite varias veces */
+.boton {
+  border: none;                                                  /* para quitar el borde al boton*/
+  background: linear-gradient(to right, var(--verde), var(--cyan)); /* color fondo degradado verde→cyan del botn*/
+  color: var(--blanco); /* color del texto del boton*/
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 34px;
+  border-radius: 25px;   /* poner el borde del boton redondeado */
+  cursor: pointer;       /* para que aparezca la manito al pasar por encima del boton*/
+}
+
+.boton:hover {
+  opacity: 0.6;          /* se aclara un poco al pasar el mouse */
+}
+
+/* SECCION HERO */
+.hero-section {
+  display: flex;            /* dos columnas: texto | imágenes */
+  align-items: center;      /* las centra a la misma altura */
+  background-color: var(--gris-claro);
+}
