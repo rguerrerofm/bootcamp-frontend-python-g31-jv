@@ -6,18 +6,19 @@
 }
 /* -- COLORES DE LA PAGINA -- */
 :root {
-  --azul-oscuro: hsl(233, 26%, 24%);
-  --verde: hsl(136, 65%, 51%);
-  --cyan: hsl(192, 70%, 51%);
-  --gris: hsl(233, 8%, 62%);
-  --gris-claro: hsl(220, 16%, 96%);
-  --blanco: hsl(0, 0%, 100%);
+  --azul-oscuro: hsl(233, 26%, 24%);   /* Blue 950 */
+  --verde: hsl(136, 64%, 51%);          /* Green 500 */
+  --cyan: hsl(192, 69%, 51%);           /* Cyan 400 */
+  --gris: hsl(233, 8%, 62%);            /* Gray 600 */
+  --gris-claro: hsl(220, 16%, 96%);     /* Gray 100 */
+  --gris-muy-claro: hsl(0, 0%, 98%);    /* Gray 50 */
+  --blanco: hsl(0, 0%, 100%);           /* White */
 }
 
 /* -- ESTILO PARA TODA LA PAGINA -- */
 body {
   font-family: "Public Sans", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   color: var(--gris);
   background-color: var(--blanco);
 }
@@ -79,7 +80,266 @@ a {
 
 /* SECCION HERO */
 .hero-section {
-  display: flex;            /* dos columnas: texto | imágenes */
-  align-items: center;      /* las centra a la misma altura */
+  display: flex;            /* poner en dos columnas: texto | imágenes */
+  align-items: center;      /* para centrar a la misma altura */
   background-color: var(--gris-claro);
+}
+/* Columna del texto */
+.hero-intro {
+   flex: 1;                 /* para que ocupe la mitad del espacio */
+  padding: 0 40px; /* para dar espacios alrededor */
+}
+
+.hero-titulo {
+  font-size: 50px;
+  font-weight: 300;         /* para que el grosor del texto sea delgado */
+  color: var(--azul-oscuro);
+  line-height: 1.1;         /* junta un poco entrelineas */
+  margin-bottom: 25px; /* para dar espacios alrededor */
+}
+
+.hero-parrafo {
+  line-height: 1.6;         /* espacio entrelineas */
+  margin-bottom: 35px; /* para dar espacios alrededor */
+}
+
+/* Columna de las imágenes */
+.hero-imagenes {
+  flex: 1;
+  position: relative;       /* base para colocar el fondo */
+  background-image: url("images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom -200px right -280px; /* ubica el blob detrás */
+}
+
+.hero-imagenes img {
+  position: relative;       /* para que la imagen de los celulares quede encima encima del fondo */
+  margin-top: -10px;       /* sube los celulares para que sobresalgan */
+}
+
+/* SECCION DE CARACTERÍSTICAS */
+
+.caracteristicas-section {
+  background-color: var(--gris-claro);  
+  padding: 80px 40px;                   /* dar espacio 80 arriba y abajo, y 40 a los lados */
+}
+
+.caracteristicas-titulo {
+  font-size: 38px;
+  font-weight: 400;
+  color: var(--azul-oscuro);
+  margin-bottom: 20px; /* dar espacio vertical entre los elementos */
+}
+
+.caracteristicas-parrafo {
+  max-width: 600px;      /* evita que el texto se estire de lado a lado */
+  line-height: 1.6;
+  margin-bottom: 60px;   /* dar espacio vertical entre los elementos */
+}
+
+/* Las 4 tarjetas, en fila */
+.caracteristicas-items {
+  display: flex;
+  gap: 30px;             /* espacio entre tarjetas */
+}
+
+.caracteristica {
+  flex: 1;               /* cada tarjeta ocupa el mismo ancho */
+}
+
+.caracteristica-imagen {
+  width: 72px;           /* tamaño del ícono */
+  margin-bottom: 25px;
+}
+
+.caracteristica-titulo {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--azul-oscuro);
+  margin-bottom: 15px;
+}
+
+.caracteristica-parrafo {
+  line-height: 1.6;
+}
+
+/* SECCION ARTICULOS */
+
+.articulos {
+  padding: 80px 40px;  /* dar espacio 80 arriba y abajo, y 40 a los lados */
+  background-color: var(--gris-muy-claro);   /* casi blanco */
+}
+
+.articulos-titulo {
+  font-size: 38px;
+  font-weight: 400;
+  color: var(--azul-oscuro);
+  margin-bottom: 40px;
+}
+
+.articulos-items {
+  display: flex;
+  gap: 30px;
+}
+
+.articulo {
+  flex: 1;
+  background-color: var(--blanco);
+  border-radius: 8px;  /* dar redondeo a las esquinas */
+  overflow: hidden;  /* Para recortar las partes de la imagen que pueda salirse de la caja redondeada*/
+  box-shadow: 0 4px 15px hsl(0, 0%, 90%);
+}
+
+.articulo-imagen {
+  width: 100%;  /* para que la imagen ocupe todo el ancho de la tarjeta */
+  height: 200px;  /* para que todas las imagenes tengan la misma altura*/
+  object-fit: cover; /* para que la imagen no se estire ni aplaste y solo se recorte*/
+}
+
+.articulo-texto {
+  padding: 25px; /* para que el texto tengo espacio hacia dentro por los 4 lados*/
+}
+
+.articulo-autor {
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+
+.articulo-titulo {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--azul-oscuro);
+  margin-bottom: 15px;
+}
+
+.articulo-titulo:hover {
+  color: var(--verde);
+}
+
+.articulo-parrafo {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* SECION DEL FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;   /* separa los 3 bloques */
+  padding: 45px 40px;
+  background-color: var(--azul-oscuro);
+}
+
+/* Columna izquierda: logo + redes */
+.footer-izquierda {
+  display: flex;
+  flex-direction: column;   /* apila: logo arriba, redes abajo */
+  gap: 50px;
+}
+
+.footer-izquierda-redes {
+  display: flex;            /* los íconos en fila */
+  gap: 15px;
+}
+
+.footer-izquierda-redes img {
+  width: 20px;
+}
+
+/* Columna del centro*/
+
+.footer-centro {
+  display: flex;
+  gap: 100px;              /* separa las dos columnas de enlaces */
+}
+
+.footer-centro nav {
+  display: flex;
+  flex-direction: column;  /* apila los 3 enlaces de cada menú */
+  gap: 15px;
+}
+
+.footer-centro a {
+  color: var(--blanco);
+  font-size: 14px;
+}
+
+.footer-centro a:hover {
+  color: var(--verde);
+}
+
+/* Columna derecha */
+.footer-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;   /* pega el botón y el texto a la derecha */
+  gap: 25px;
+}
+
+.footer-derecha-texto {
+  color: var(--gris);
+  font-size: 14px;
+}
+
+
+/* PARA QUE SEA RESPONSIVE A CELULAR */
+
+@media (max-width: 768px) {
+
+  /* BARRA: apilar logo, menú y botón */
+  .barra-navegadora {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* HERO: imagen arriba, texto abajo y centrado */
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-titulo {
+    font-size: 38px;
+  }
+  .hero-imagenes {
+    background: none;      /* quitamos el fondo decorativo */
+  }
+  .hero-imagenes img {
+    margin: 0 auto;        /* centra los celulares */
+  }
+
+  /* CARACTERÍSTICAS: 1 por fila y centradas */
+  
+  .caracteristicas-section {
+    text-align: center;
+  }
+  .caracteristicas-parrafo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .caracteristicas-items {
+    flex-direction: column;
+  }
+  .caracteristica {
+    text-align: center;
+  }
+  .caracteristica-imagen {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ARTÍCULOS: 1 por fila */
+  .articulos-items {
+    flex-direction: column;
+  }
+
+  /* FOOTER: apilar y centrar */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+  .footer-derecha {
+    align-items: center;
+  }
 }
