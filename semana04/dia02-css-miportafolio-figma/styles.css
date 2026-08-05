@@ -79,8 +79,14 @@ a {
 }
 
 .header__menu {
-  display: flex;
-  gap: 1.5rem /* 1.5rem <> 24px <> 16px x 1.5 */;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header__menu {
+    display: flex;
+    gap: 1.5rem /* 1.5rem <> 24px <> 16px x 1.5 */;
+  }
 }
 
 .header__menu a {
@@ -97,7 +103,7 @@ a {
 /* HERO */
 
 .hero {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   flex-direction: column;
@@ -108,17 +114,64 @@ a {
 
 /* TODO: Añadir los estilos a las siguientes clases para la sección .hero  */
 
-.hero_gretting {
+.hero__gretting {
+  font-weight: var(--font-weight-bold);
+  font-size: 2rem;
+  text-align: center;
 }
 
-.hero_gretting span {
+.hero__gretting span {
+  color: var(--primary-color-gold);
+  text-decoration: underline;
 }
 
-.hero_title {
+.hero__title {
+  font-weight: var(--font-weight-bold);
+  font-size: 3rem;
 }
 
-.hero_description {
+.hero__description {
+  font-weight: var(--font-weight-regular);
+  font-size: 1.5rem;
 }
 
-.hero_photo {
+.hero__photo {
+  border-radius: 50%;
+}
+
+.stack {
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px 100px 100px 100px; */
+  /* grid-template-columns: repeat(6, 100px); */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .stack {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.stack__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stack__title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stack__box {
+  width: 7rem; /* 112px <> 7rem */
+  height: 7rem; /* 112px <> 7rem */
+
+  background-color: var(--primary-color-blue3);
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
