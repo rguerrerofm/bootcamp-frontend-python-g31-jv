@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon Ball CRUD - Ricardo Guerrero</title>
+
+  <!-- Fuente Public Sans (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ===== CABECERA: titulo + contador ===== -->
+  <header class="cabecera">
+    <div>
+      <h1 class="cabecera-titulo">Dragon Ball <span>CRUD</span></h1>
+      <p class="cabecera-sub">Gestiona tus personajes</p>
+    </div>
+    <div class="cabecera-contador">
+      <span id="contador">0</span>
+      <small>PERSONAJES DB</small>
+    </div>
+  </header>
+
+  <main class="contenido">
+
+    <!-- ===== IZQUIERDA: formulario ===== -->
+    <aside>
+      <div class="tarjeta">
+        <h2 id="form-titulo" class="form-titulo">Nuevo personaje</h2>
+
+        <form id="form-personaje" class="formulario">
+          <!-- Campo oculto: guarda el id (vacio = crear) -->
+          <input type="hidden" id="personaje-id">
+
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Ej: Goku" required>
+
+          <label for="imagen">Imagen (URL)</label>
+          <input type="url" id="imagen" placeholder="https://..." required>
+
+          <label for="raza">Raza</label>
+          <input type="text" id="raza" placeholder="Ej: Saiyan" required>
+
+          <div class="form-botones">
+            <button type="submit" id="btn-guardar" class="boton">Agregar personaje</button>
+            <button type="button" id="btn-cancelar" class="boton-secundario" hidden>Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    <!-- ===== DERECHA: lista de personajes ===== -->
+    <section>
+      <h2 class="lista-titulo">Lista de personajes</h2>
+
+      <!-- Mensajes de estado -->
+      <p id="cargando" class="mensaje-cargando" hidden>Cargando personajes...</p>
+      <p id="error" class="mensaje-error" hidden></p>
+      <p id="vacio" class="mensaje-vacio" hidden>Aun no hay personajes. Crea el primero!</p>
+
+      <!-- pinta las tarjetas -->
+      <div id="lista" class="lista"></div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>Proyecto CRUD de JavaScript, DOM y Asincronia - Elaborado por Ricardo Guerrero</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

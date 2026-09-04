@@ -1,0 +1,306 @@
+/* ===========================================================
+   DRAGON BALL CRUD - Estilos
+   =========================================================== */
+
+/* ----- Colores del proyecto ----- */
+:root {
+  --azul-oscuro: hsl(233, 26%, 24%);
+  --verde: hsl(136, 64%, 51%);
+  --cyan: hsl(192, 69%, 51%);
+  --gris: hsl(233, 8%, 62%);
+  --gris-claro: hsl(220, 16%, 96%);
+  --gris-muy-claro: hsl(0, 0%, 98%);
+  --blanco: hsl(0, 0%, 100%);
+  --degradado: linear-gradient(to right, var(--verde), var(--cyan));
+}
+
+/* ----- Reset y base ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  background-color: var(--gris-muy-claro);
+  color: var(--azul-oscuro);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== CABECERA ===== */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cabecera-titulo {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.cabecera-titulo span {
+  color: var(--verde);
+}
+
+.cabecera-sub {
+  color: var(--gris);
+  margin-top: 4px;
+}
+
+.cabecera-contador {
+  text-align: right;
+}
+
+.cabecera-contador span {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--verde);
+}
+
+.cabecera-contador small {
+  color: var(--gris);
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+/* ===== LAYOUT DE DOS COLUMNAS ===== */
+.contenido {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+aside {
+  width: 340px;
+  flex-shrink: 0;
+}
+
+section {
+  flex: 1;
+}
+
+/* ===== TARJETA DEL FORMULARIO ===== */
+.tarjeta {
+  background-color: var(--blanco);
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 6px 20px hsl(233, 26%, 24%, 0.06);
+}
+
+.form-titulo {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formulario label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.formulario input {
+  padding: 11px 14px;
+  border: 1px solid var(--gris-claro);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: var(--gris-muy-claro);
+}
+
+.formulario input:focus {
+  outline: none;
+  border-color: var(--verde);
+  background-color: var(--blanco);
+}
+
+.form-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* ===== BOTONES ===== */
+.boton {
+  border: none;
+  background: var(--degradado);
+  color: var(--blanco);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 13px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  opacity: 0.85;
+}
+
+.boton-secundario {
+  border: none;
+  background-color: var(--gris-claro);
+  color: var(--azul-oscuro);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 11px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.boton-secundario:hover {
+  opacity: 0.8;
+}
+
+/* ===== LISTA ===== */
+.lista-titulo {
+  font-size: 18px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--verde);
+  display: inline-block;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Tarjeta de cada personaje */
+.personaje {
+  background-color: var(--blanco);
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 4px 14px hsl(233, 26%, 24%, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.personaje-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  background-color: var(--gris-claro);
+  flex-shrink: 0;
+}
+
+.personaje-info {
+  flex: 1;
+}
+
+.personaje-nombre {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.personaje-raza {
+  display: inline-block;
+  background-color: var(--gris-claro);
+  color: var(--azul-oscuro);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.personaje-acciones {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-editar,
+.btn-eliminar {
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: hsl(192, 69%, 51%, 0.15);
+  color: hsl(192, 69%, 35%);
+}
+
+.btn-editar:hover {
+  background-color: hsl(192, 69%, 51%, 0.28);
+}
+
+.btn-eliminar {
+  background-color: hsl(0, 72%, 60%, 0.12);
+  color: hsl(0, 72%, 48%);
+}
+
+.btn-eliminar:hover {
+  background-color: hsl(0, 72%, 60%, 0.22);
+}
+
+/* ===== MENSAJES DE ESTADO ===== */
+.mensaje-cargando,
+.mensaje-vacio {
+  color: var(--gris);
+  padding: 20px;
+  text-align: center;
+}
+
+.mensaje-error {
+  background-color: hsl(0, 72%, 60%, 0.1);
+  color: hsl(0, 72%, 45%);
+  border: 1px solid hsl(0, 72%, 60%, 0.3);
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* ===== PIE ===== */
+.pie {
+  text-align: center;
+  color: var(--gris);
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* ===== RESPONSIVE (celular) ===== */
+@media (max-width: 768px) {
+  .cabecera {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .cabecera-contador {
+    text-align: center;
+  }
+  .contenido {
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+  }
+}
